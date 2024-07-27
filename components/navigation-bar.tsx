@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 import CommandMenu from "@/components/command-menu";
 import { NavLink, Logo } from "@/types";
-import SheetMenu from "./sheet-menu";
+import SheetMenu from "@/components/sheet-menu";
 
 interface NavigationBarProps {
   logo: Logo;
