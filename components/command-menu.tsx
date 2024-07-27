@@ -10,8 +10,13 @@ import {
 import { SearchIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { NavLink } from "@/types";
 
-export default function CommandMenu() {
+interface CommandMenuProps {
+  links: NavLink[];
+}
+
+export default function CommandMenu({ links }: CommandMenuProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -38,10 +43,17 @@ export default function CommandMenu() {
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="links">
-            <CommandItem>Calendar</CommandItem>
-            <CommandItem>Search Emoji</CommandItem>
-            <CommandItem>Calculator</CommandItem>
+          <CommandGroup heading="Links">
+            {links.map((link) => (
+              <div key={link.title}>
+                <CommandItem>{link.title}</CommandItem>
+                {link.subLinks && link.subLinks.map((subLink) => (
+                  <CommandItem key={subLink.title} className="ml-4">
+                    {subLink.title}
+                  </CommandItem>
+                ))}
+              </div>
+            ))}
           </CommandGroup>
         </CommandList>
       </CommandDialog>

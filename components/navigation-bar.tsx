@@ -70,7 +70,7 @@ export default function NavigationBar({ logo, links }: NavigationBarProps) {
       </NavigationMenu>
       <div className="flex items-center space-x-1">
         <ModeToggle />
-        <CommandMenu />
+        <CommandMenu links={links} />
       </div>
     </div>
   );
