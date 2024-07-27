@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import CommandMenu from "@/components/command-menu";
 import { NavLink, Logo } from "@/types";
+import SheetMenu from "./sheet-menu";
 
 interface NavigationBarProps {
   logo: Logo;
@@ -21,7 +22,10 @@ interface NavigationBarProps {
 
 export default function NavigationBar({ logo, links }: NavigationBarProps) {
   return (
-    <div className="h-32 border-b flex items-center justify-between px-8 z-40 w-full fixed">
+    <div className="h-32 border-b flex items-center justify-between px-8 z-40 w-full fixed backdrop-blur">
+      <div className="lg:hidden flex">
+        <SheetMenu />
+      </div>
       <Link href={logo.href} className="flex items-center space-x-1">
         <Image
           src={logo.src}
@@ -32,13 +36,13 @@ export default function NavigationBar({ logo, links }: NavigationBarProps) {
         />
         <span className="text-xl font-extralight">{logo.title}</span>
       </Link>
-      <NavigationMenu>
+      <NavigationMenu className="lg:flex hidden">
         <NavigationMenuList>
           {links.map((link) => (
             <NavigationMenuItem key={link.title}>
               {link.subLinks ? (
                 <>
-                  <NavigationMenuTrigger>{link.title}</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-transparent">{link.title}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                       {link.subLinks.map((subLink) => (
@@ -55,7 +59,7 @@ export default function NavigationBar({ logo, links }: NavigationBarProps) {
                 </>
               ) : (
                 <Link href={link.href!} legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent`}>
                     {link.title}
                   </NavigationMenuLink>
                 </Link>

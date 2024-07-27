@@ -38,7 +38,7 @@ export default function RootLayout({
           <header>
             <NavigationBar links={LINKS} logo={LOGO} />
           </header>
-          {children}
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>

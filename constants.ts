@@ -12,17 +12,17 @@ export const LINKS = [
     subLinks: [
       {
         title: "Chain of Command",
-        href: "/docs",
+        href: "/",
         description: "Meet all government chain of command.",
       },
       {
         title: "Brigade Leadership",
-        href: "/docs/installation",
+        href: "/",
         description: "Meet your brigade leadership for this year.",
       },
       {
         title: "SDUSD JROTC Units",
-        href: "/docs/primitives/typography",
+        href: "/",
         description: "Know the district JROTC units.",
       },
     ],
@@ -32,17 +32,17 @@ export const LINKS = [
     subLinks: [
       {
         title: "Scholarships",
-        href: "/docs",
+        href: "/",
         description: "Explore scholarship opportunities.",
       },
       {
         title: "Branch Regulations",
-        href: "/docs/installation",
+        href: "/",
         description: "Understand the regulations of different JROTC branches.",
       },
       {
         title: "Calendar",
-        href: "/docs/primitives/typography",
+        href: "/",
         description: "Keep track of important dates and events.",
       },
     ],
