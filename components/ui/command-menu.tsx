@@ -11,6 +11,7 @@ import { SearchIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/types";
+import Link from "next/link";
 
 interface CommandMenuProps {
   links: NavLink[];
@@ -42,16 +43,30 @@ export default function CommandMenu({ links }: CommandMenuProps) {
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
+          <CommandEmpty>No results found...</CommandEmpty>
           <CommandGroup heading="Links">
             {links.map((link) => (
               <div key={link.title}>
-                <CommandItem>{link.title}</CommandItem>
-                {link.subLinks && link.subLinks.map((subLink) => (
-                  <CommandItem key={subLink.title} className="ml-4">
-                    {subLink.title}
-                  </CommandItem>
-                ))}
+                <Link
+                  href={`${link.href}`}
+                  onClick={() => setOpen(false)}
+                  passHref
+                >
+                  <CommandItem>{link.title}</CommandItem>
+                </Link>
+                {link.subLinks &&
+                  link.subLinks.map((subLink) => (
+                    <Link
+                      key={subLink.title}
+                      href={subLink.href}
+                      onClick={() => setOpen(false)}
+                      passHref
+                    >
+                      <CommandItem className="ml-4">
+                        {subLink.title}
+                      </CommandItem>
+                    </Link>
+                  ))}
               </div>
             ))}
           </CommandGroup>
