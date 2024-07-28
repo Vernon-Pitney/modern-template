@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import NavigationBar from "@/components/navigation-bar";
 import { LINKS, LOGO } from "@/constants";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "SDUSD JROTC",
@@ -28,6 +29,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <SpeedInsights />
         <header>
           <NavigationBar links={LINKS} logo={LOGO} />
         </header>

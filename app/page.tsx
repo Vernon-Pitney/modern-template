@@ -81,12 +81,12 @@ export default function Home() {
       </section>
       <section className="bg-background pt-20 pb-20 border-b border-t">
         <div className="container ">
-        <iframe
-          src="https://www.google.com/maps/d/embed?mid=1uw7N6i7fmpsdyIWkNTKVGx7rp36K-2k&ehbc=2E312F"
-          width="640"
-          height="480"
-          className="w-full rounded-xl"
-        ></iframe>
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1uw7N6i7fmpsdyIWkNTKVGx7rp36K-2k&ehbc=2E312F"
+            width="640"
+            height="480"
+            className="w-full rounded-xl"
+          ></iframe>
         </div>
       </section>
     </div>
