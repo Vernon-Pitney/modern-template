@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import NavigationBar from "@/components/navigation-bar";
 import { LINKS, LOGO } from "@/constants";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "SDUSD JROTC",
@@ -30,6 +31,7 @@ export default function RootLayout({
         )}
       >
         <SpeedInsights />
+        <Analytics />
         <header>
           <NavigationBar links={LINKS} logo={LOGO} />
         </header>
