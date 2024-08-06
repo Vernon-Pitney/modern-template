@@ -37,6 +37,7 @@ export default function CommandMenu({ links }: CommandMenuProps) {
         variant="ghost"
         size="icon"
         onClick={() => setOpen((open) => !open)}
+        aria-label="Search Button"
       >
         <SearchIcon className="h-[1.2rem] w-[1.2rem]" />
       </Button>

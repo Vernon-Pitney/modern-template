@@ -18,11 +18,11 @@ export default function Home() {
             <h1 className="text-5xl font-bold text-foreground">
               Motivating Young People To Be Better Citizens
             </h1>
-            <p className="mt-5 text-lg text-muted-foreground">
+            <h2 className="mt-5 text-lg text-muted-foreground">
               Learn about the SDUSD JROTC Brigade, a community of 14 schools
               dedicated to developing leadership, citizenship, and personal
               growth among young people.
-            </p>
+            </h2>
             <Button variant={"default"} className="mt-5">
               Learn More
             </Button>
@@ -33,14 +33,14 @@ export default function Home() {
               alt={"Innovation Main Hero"}
               width={600}
               height={400}
-              className="rounded-xl shadow-xl "
+              className="rounded-3xl shadow-xl h-auto w-[35rem]"
               priority
             />
           </div>
         </div>
       </section>
       <section className="bg-gradient-to-b from-purple-500/20 pt-20 pb-20">
-        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-x-4 gap-x-0 lg:gap-y-0 gap-y-4 container">
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-x-4 gap-x-0 lg:gap-y-0 gap-y-4 container ">
           <Card>
             <CardHeader>
               <CardTitle>About JROTC</CardTitle>
@@ -49,8 +49,7 @@ export default function Home() {
               <p className="text-muted-foreground">
                 JROTC is a high school program that builds leadership,
                 perseverance, and character. It prepares students for college
-                and careers while offering daily classes and after-school
-                activities.
+                and careers.
               </p>
             </CardContent>
           </Card>
@@ -79,16 +78,7 @@ export default function Home() {
           </Card>
         </div>
       </section>
-      <section className="bg-background pt-20 pb-20 border-b border-t">
-        <div className="container ">
-          <iframe
-            src="https://www.google.com/maps/d/embed?mid=1uw7N6i7fmpsdyIWkNTKVGx7rp36K-2k&ehbc=2E312F"
-            width="640"
-            height="480"
-            className="w-full rounded-xl"
-          ></iframe>
-        </div>
-      </section>
+      
     </div>
   );
 }

@@ -6,7 +6,7 @@ export default function SheetMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" size={"icon"}>
+        <Button variant="ghost" size={"icon"} aria-label="Side Bar Button">
             <MenuIcon className="h-[1.2rem] w-[1.2rem]"/>
         </Button>
       </SheetTrigger>
