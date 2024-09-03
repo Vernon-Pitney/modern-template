@@ -8,6 +8,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 export default function Home() {
   return (
     <div>
+      
       <section className="bg-gradient-to-t from-purple-500/20 pt-20">
         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0 lg:space-x-20">
           <div className="max-w-lg lg:text-left text-center">
@@ -131,27 +132,26 @@ export default function Home() {
           <SectionTitle title={"Brigade Introduction"} />
         </motion.div>
         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center lg:mt-12 mt-24 lg:space-x-20 space-y-10 lg:space-y-0">
-          
-        <motion.div
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-          <Image
-            src={"/brigade-intro.png"}
-            alt={"Brigade introduction"}
-            width={600}
-            height={400}
-            className="rounded-3xl shadow-xl h-auto w-[35rem] "
-            priority
-          />
+            <Image
+              src={"/brigade-intro.png"}
+              alt={"Brigade introduction"}
+              width={600}
+              height={400}
+              className="rounded-3xl shadow-xl h-auto w-[35rem] "
+              priority
+            />
           </motion.div>
           <div>
             <motion.h1
               className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-foreground text-center lg:text-left"
               initial={{ opacity: 0, y: -50 }}
-              transition={{ type: "just", duration: 1.4}}
+              transition={{ type: "just", duration: 1.4 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
             >

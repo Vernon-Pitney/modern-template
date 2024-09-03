@@ -10,7 +10,8 @@ import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "SDUSD JROTC",
-  description: "SDUSD JROTC is a program where motivated young cadets can experience how to become leaders.",
+  description:
+    "SDUSD JROTC is a program where motivated young cadets can experience how to become leaders.",
 };
 
 const fontSans = FontSans({
@@ -31,6 +32,8 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <iframe src="cadence.mp3" allow="autoplay" id="audio" className="hidden"></iframe>
+        
         <SpeedInsights />
         <Analytics />
         <header>
@@ -38,7 +41,11 @@ export default function RootLayout({
         </header>
         <main>{children}</main>
         <footer>
-          <Footer facebookLink={SOCIAL_MEDIA.facebookLink} twitterLink={SOCIAL_MEDIA.twitterLink} instagramLink={SOCIAL_MEDIA.instagramLink}/>
+          <Footer
+            facebookLink={SOCIAL_MEDIA.facebookLink}
+            twitterLink={SOCIAL_MEDIA.twitterLink}
+            instagramLink={SOCIAL_MEDIA.instagramLink}
+          />
         </footer>
       </body>
     </html>
