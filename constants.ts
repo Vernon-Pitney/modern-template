@@ -5,6 +5,12 @@ export const LOGO = {
   alt: "Navigation Bar Icon",
 };
 
+export const SOCIAL_MEDIA = {
+  facebookLink: "string",
+  twitterLink: "string",
+  instagramLink: "string",
+};
+
 export const LINKS = [
   { title: "Home", href: "/" },
   {
@@ -49,6 +55,6 @@ export const LINKS = [
   },
   { title: "Brigade Awards", href: "/brigade-awards" },
   { title: "Gallery", href: "/gallery" },
-  {title: "About Us", href: "/about-us"},
+  { title: "About Us", href: "/about-us" },
   { title: "Contact Us", href: "/contact-us" },
 ];

@@ -42,7 +42,7 @@ export default function CommandMenu({ links }: CommandMenuProps) {
         <SearchIcon className="h-[1.2rem] w-[1.2rem]" />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder="Type a search..." />
         <CommandList>
           <CommandEmpty>No results found...</CommandEmpty>
           <CommandGroup heading="Links">
@@ -64,7 +64,7 @@ export default function CommandMenu({ links }: CommandMenuProps) {
                       passHref
                     >
                       <CommandItem className="ml-4">
-                        {subLink.title}
+                        - {subLink.title}
                       </CommandItem>
                     </Link>
                   ))}

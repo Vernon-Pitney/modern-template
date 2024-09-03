@@ -3,9 +3,10 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import NavigationBar from "@/components/navigation-bar";
-import { LINKS, LOGO } from "@/constants";
+import { LINKS, LOGO, SOCIAL_MEDIA } from "@/constants";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "SDUSD JROTC",
@@ -36,6 +37,9 @@ export default function RootLayout({
           <NavigationBar links={LINKS} logo={LOGO} />
         </header>
         <main>{children}</main>
+        <footer>
+          <Footer facebookLink={SOCIAL_MEDIA.facebookLink} twitterLink={SOCIAL_MEDIA.twitterLink} instagramLink={SOCIAL_MEDIA.instagramLink}/>
+        </footer>
       </body>
     </html>
   );
