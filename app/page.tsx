@@ -128,7 +128,7 @@ export default function Home() {
           />
           <div>
             <h1 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-foreground text-center lg:text-left">
-              Empowering Tomorrow's Leaders Today
+              Empowering Tomorrow&apos;s Leaders Today
             </h1>
             <motion.p
               className="mt-5 text-lg text-muted-foreground max-w-3xl text-center lg:text-left"
