@@ -2,13 +2,12 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import * as motion from "framer-motion/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import SectionTitle from "@/components/ui/section-title";
+import SectionTitle from "@/components/section-title";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function Home() {
   return (
     <div>
-      
       <section className="bg-gradient-to-t from-purple-500/20 pt-20">
         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0 lg:space-x-20">
           <div className="max-w-lg lg:text-left text-center">

@@ -10,9 +10,10 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
-import CommandMenu from "@/components/ui/command-menu";
+import CommandMenu from "@/components/command-menu";
 import { NavLink, Logo } from "@/types";
-import SheetMenu from "@/components/ui/sheet-menu";
+import SheetMenu from "@/components/sheet-menu";
+import { LINKS, LOGO } from "@/constants";
 
 interface NavigationBarProps {
   logo: Logo;
@@ -24,7 +25,7 @@ export default function NavigationBar({ logo, links }: NavigationBarProps) {
     <div>
       <div className="lg:h-32 h-16 border-b flex items-center justify-between px-8 z-40 w-full bg-background">
         <div className="lg:hidden flex">
-          <SheetMenu />
+          <SheetMenu logo={LOGO} links={LINKS} />
         </div>
         <Link href={logo.href} className="flex items-center space-x-1">
           <Image
@@ -35,7 +36,9 @@ export default function NavigationBar({ logo, links }: NavigationBarProps) {
             className="lg:w-16 w-10 h-auto"
             priority
           />
-          <span className="lg:text-xl text-base font-extralight">{logo.title}</span>
+          <span className="lg:text-xl text-base font-extralight">
+            {logo.title}
+          </span>
         </Link>
         <NavigationMenu className="lg:flex hidden">
           <NavigationMenuList>

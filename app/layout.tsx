@@ -32,8 +32,6 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <iframe src="cadence.mp3" allow="autoplay" id="audio" className="hidden"></iframe>
-        
         <SpeedInsights />
         <Analytics />
         <header>
